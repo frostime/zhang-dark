@@ -2114,7 +2114,7 @@ strong[style="background-color: var(--b3-font-background13);"]:hover {
 }
 
 /*.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):hover, .pcr-app .pcr-interaction .pcr-result:hover {
-    /* border-bottom: 1px solid var(--b3-theme-on-background) !important; */
+    border-bottom: 1px solid var(--b3-theme-on-background) !important;
     color: var(--b3-font-color-hover);
     background-color: var(--b3-theme-hover-gray);
     box-shadow: none;
