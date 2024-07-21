@@ -18,7 +18,7 @@ jobs:
 
       - name: Package
         run: |
-          zip -r ../package.zip .
+          zip -r ./package.zip .
 
       - uses: ncipollo/release-action@v1
         with:
