@@ -1,7 +1,9 @@
 /* 引入配色文件 */
 @import url("style/theme-setting.css");
 /* 给网址链接设置颜色 */
-@import url("style/link-icon-color.css");
+/* @import url("style/link-icon-color.css"); */
+@import url(./style/wysiwyg/hyper-link.css);
+@import url(./style/wysiwyg/block-ref.css);
 
 /* ————————————————————所有边距初始化———————————————————— */
 * {
@@ -280,123 +282,9 @@ mark {
 }
 
 /* ----------------------------------------------引用 END---------------------------------------------- */
-/* ------------------------------------------------块引用/引用块------------------------------------------------- */
-/* 设置引用块格式 */
-.protyle-wysiwyg [data-node-id] span[data-type='block-ref'] {
-    color: inherit;
-    padding-inline:0.2em;
-   /* border-bottom: 1px solid var(--b3-theme-primary);*/
-    margin: 2px;
-   opacity:1;
-}
-
-/* 为引用块后面增加引用图标 */
-/*.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]::before {
-    content: "📑";
-    position: relative;
-    font-size: 80%;
-    top: -0.1em;
-    margin-right: 2px;
-}*/
-
-.protyle-wysiwyg [data-node-id] span[data-type="block-ref"]:hover {
-    color: var(--b3-theme-primary);
-    background-color: var(--b3-theme-hover);
-    border-radius: 3px 3px 0 0;
-}
-
-/* 引用块悬浮时头部的背景颜色 */
-.b3-menu, .protyle-util,.b3-menu .b3-menu__submenu {
-    box-shadow: var(--b3-small-kuaiyinyong-shadow);}
-.b3-menu, .protyle-util,.b3-menu .b3-menu__submenu,.b3-dialog__container,.block__popover--open {border:var(--b3-border-normal)
-}
-
-/* 上方表头区域 */
-.block__popover--move>.block__icons {
-    color: var(--b3-theme-primary);
-    background-color: var(--b3-theme-tm1) !important;
-    border-top: 3px solid var(--b3-theme-primary) !important;
-}
-
-/* 下方编辑区域 */
-.block__popover--move textarea.b3-text-field.b3-text-field--text.fn__block {
-    background-color: var(--b3-theme-background);
-    border: none;
-    font-family: var(--b3-font-family-code);
-    user-select: none;
-    border-bottom: var(--b3-border-wider);
-}
-
-/* 引用块打开时的阴影 */
-.block__popover--open {
-    box-shadow: var(--b3-small-kuaiyinyong-shadow);
-}
-
-/* 去掉h1-h6标题上块引用的下划线，感谢二群群友123的建议 */
-.h1 span[data-type='block-ref'],
-.h2 span[data-type='block-ref'],
-.h3 span[data-type='block-ref'],
-.h4 span[data-type='block-ref'],
-.h5 span[data-type='block-ref'],
-.h6 span[data-type='block-ref'] {
-    border-bottom: 1px solid transparent !important;
-}
-
-/* ------------------------------------------------块引用 END------------------------------------------------- */
-
-/* -----------------------------------------超链接 a----------------------------------- */
-.item__main a,
-.protyle-wysiwyg [data-node-id] span[data-type='a'] {
-    color: inherit;
-    padding: 0.1em 0.2em;
-    padding-bottom: 0.05em !important;
-    margin: 2px;
-    border-bottom: 1px solid gray;
-    word-break: break-all;
-}
-
-.b3-typography a {
-    word-break: break-all;
-}
 
 
-/* ——————————给超链接（包括导入的PDF文件等）前面加入图标—————————— */
-/* .item__main a::before,
-.protyle-wysiwyg [data-node-id] span[data-type="a"]:before {
-    content: "💬";
-    margin-right: 2px;
-    font-size: 80%;
-    position: relative;
-    top: -0.1em;
-} */
-
-.item__main a:hover,
-.protyle-wysiwyg [data-node-id] span[data-type='a']:hover {
-    color: var(--b3-theme-primary);
-    background-color: var(--b3-theme-background-link-hover);
-    border-radius: 3px 3px 0 0;
-    border-bottom: 1px solid gray;
-    text-decoration: none;
-}
-
-/* ————————————————————标题上的链接去掉下划线，2群群友123的建议———————————————————— */
-.h1 span[data-type="a"],
-.h2 span[data-type="a"],
-.h3 span[data-type="a"],
-.h4 span[data-type="a"],
-.h5 span[data-type="a"],
-.h6 span[data-type="a"] {
-    border-bottom: 1px solid transparent !important;
-}
-
-/* ————————————————————正文中的超链接保持原来的颜色———————————————————— */
-.item__main a,
-.p [data-type="a"] {
-    color: var(--b3-theme-primary) !important;
-}
-
-
-/* -----------------------------------------超链接 END----------------------------------- */
+/* 原 hyper link */
 
 /* ------------------------------------------------块嵌入/嵌入块------------------------------------------------- */
 .protyle-wysiwyg [data-node-id].render-node[data-type="NodeBlockQueryEmbed"] {
@@ -2918,78 +2806,7 @@ strong[style*="quote"] {
 /* -----------------------------------------------------到此为止结束-------------------------------------------- */
 /* -----------------------------------------------------到此为止结束-------------------------------------------- */
 
-.protyle-wysiwyg, .b3-typography {
-    counter-reset: h1 0 h2 0 h3 0 h4 0 h5 0 h6 0;
-}
-
-.protyle-wysiwyg [data-node-id].h1, .b3-typography h1 {
-    counter-reset: h2 0 h3 0 h4 0 h5 0 h6 0;
-}
-
-.protyle-wysiwyg [data-node-id].h2, .b3-typography h2 {
-    counter-reset: h3 0 h4 0 h5 0 h6 0;
-}
-
-.protyle-wysiwyg [data-node-id].h3, .b3-typography h3 {
-    counter-reset: h4 0 h5 0 h6 0;
-}
-
-.protyle-wysiwyg [data-node-id].h4, .b3-typography h4 {
-    counter-reset: h5 0 h6 0;
-}
-
-.protyle-wysiwyg [data-node-id].h5, .b3-typography h5 {
-    counter-reset: h6 0;
-}
-
-/* 设置各级列表前后的内容  */
-/* 为所有标题设置统一的内容 */
-
-.protyle-wysiwyg .h1>::before,
-.b3-typography h1:before {
-    counter-increment: h1;
-    content: "第"counter(h1, cjk-ideographic) "章  ";
-}
-
-.protyle-wysiwyg .h2>::before,
-.b3-typography h2:before {
-    counter-increment: h2;
-    content: "第"counter(h2, cjk-ideographic) "节  ";
-}
-
-.protyle-wysiwyg .h3>::before,
-.b3-typography h3:before {
-    counter-increment: h3;
-    content: counter(h3, cjk-ideographic) "、";
-}
-
-.protyle-wysiwyg .h4>::before,
-.b3-typography h4:before {
-    counter-increment: h4;
-    content: "("counter(h4, cjk-ideographic) "). ";
-}
-
-.protyle-wysiwyg .h5>::before,
-.b3-typography h5:before {
-    counter-increment: h5;
-    content: counter(h5, decimal) ". ";
-}
-
-.protyle-wysiwyg .h6>::before,
-.b3-typography h6:before {
-    counter-increment: h6;
-    content: "("counter(h6, decimal) "). ";
-}
-
-/* ——————————消除h1-h6标题中含有引用时导致计数出现自动编号的影响—————————— */
-.protyle-attr::before,
-.protyle-attr--refcount.popover__block::before {
-    display: none;
-}
-
-
-
-/* -----------------------------------------------------自动编号结束-------------------------------------------- */
+/* 原自动编号, ./style/headline-auto-number.css */
 
 
 /* -----------------------------------------------------标题下方圆角矩形开始-------------------------------------------- */
