@@ -18,7 +18,6 @@ jobs:
 
       - name: Package
         run: |
-          cd dist
           zip -r ../package.zip .
 
       - uses: ncipollo/release-action@v1
