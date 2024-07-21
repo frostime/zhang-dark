@@ -1,0 +1,93 @@
+
+.card__action .b3-button {
+    background: transparent
+}
+
+.card__action {
+    background: #252525;
+    border-top: var(--b3-border-dashed)
+}
+
+.card__action {
+    height: 84.5px;
+    padding: 3px 0px 0px 0px;
+}
+
+.card__action .b3-button:not(.b3-button--cancel, .fn__flex-1) {
+    margin-top: -8px;
+    height: 50px;
+    line-height: 23px
+}
+
+.card__action .b3-button:hover {
+    box-shadow: unset
+}
+
+.card__action .b3-button:hover>div,
+.b3-button.fn__flex-1:hover {
+    box-shadow: var(--b3-button-shadow)
+}
+
+.card__action .b3-button>div {
+    font-size: 0px;
+    border-radius: var(--b3-border-radius-half-round);
+    height: 35px;
+    margin-bottom: -30px;
+}
+
+.card__action>div>span {
+    margin-bottom: 0px
+}
+
+.card__action .b3-button--error {
+    color: var(--b3-font-color1)
+}
+
+.card__action .b3-button--warning {
+    color: var(--b3-font-color2)
+}
+
+.card__action .b3-button--info {
+    color: var(--b3-font-color5)
+}
+
+.card__action .b3-button--success {
+    color: var(--b3-font-color4)
+}
+
+.card__action .b3-button--warning>div {
+    background-color: var(--b3-h3-after) !important;
+}
+
+.card__action .b3-button--error>div {
+    background-color: var(--b3-h1-after) !important;
+}
+
+.b3-button.fn__flex-1 {
+    color: var(--b3-theme-primary);
+    background-color: #2f2f2f;
+    border-radius: var(--b3-border-radius-half-round);
+    height: 35px;
+    align-self: center;
+    overflow: hidden
+}
+
+.card__action .b3-button--info>div {
+    background-color: var(--b3-h5-after) !important;
+}
+
+.card__action .b3-button--success>div {
+    background-color: var(--b3-h4-after) !important;
+}
+
+.b3-button.b3-button--cancel.b3-tooltips__n.b3-tooltips {
+    margin-top: -5px;
+}
+
+.b3-button.b3-button--cancel.b3-tooltips__n.b3-tooltips:hover {
+    color: var(--b3-theme-primary)
+}
+
+.card__action .b3-button.b3-button--cancel:hover {
+    color: white
+}

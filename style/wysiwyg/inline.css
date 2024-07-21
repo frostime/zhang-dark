@@ -1,0 +1,26 @@
+/*备注样式*/
+.protyle-wysiwyg span[data-type~=inline-memo] {
+    border-bottom: 0px solid !important;
+    background-color: transparent;
+    background: linear-gradient(to right,
+            transparent 0%,
+            transparent 50%,
+            var(--b3-theme-primary) 50%,
+            var(--b3-theme-primary) 100%);
+    background-size: 7px 1px;
+    background-repeat: repeat-x;
+    background-position-y: bottom;
+    cursor: pointer;
+}
+
+span[data-type~=inline-memo]:not([data-type~="sup"]):not([data-type~="sub"]):after {
+    content: "注";
+    vertical-align: top;
+    font-size: .5em;
+    color: var(--b3-theme-primary);
+}
+
+span[data-type~="sup"][data-type~="inline-memo"],
+span[data-type~="sub"][data-type~="inline-memo"] {
+    color: var(--b3-theme-primary) !important;
+}

@@ -61,3 +61,24 @@
 }
 
 /* ------------------------------------------------块引用 END------------------------------------------------- */
+
+[data-node-id][data-type=block-ref],
+[data-id][data-type=block-ref]::before,
+span[data-type~=block-ref]::before,
+span[data-type~=file-annotation-ref]::before {
+    content: "[[";
+    color: var(--b3-theme-primary);
+}
+
+[data-node-id][data-type=block-ref],
+[data-id][data-type=block-ref]::after,
+span[data-type~=block-ref]::after,
+span[data-type~=file-annotation-ref]::after {
+    content: "]]";
+    color: var(--b3-theme-primary);
+}
+
+.og-hierachy-navigate-doc-container span.docLinksWrapper [data-type=block-ref]::before,
+.og-hierachy-navigate-doc-container span.docLinksWrapper [data-type=block-ref]::after {
+    display: none;
+}

@@ -1,13 +1,13 @@
 {
-  "name": "zhang-dark",
+  "name": "zhang-dark-prime",
   "author": "UserZYF",
   "url": "https://github.com/frostime/zhang-dark",
-  "version": "0.79",
+  "version": "1.0",
     "displayName": {
-    "default": "zhang-dark"
+    "default": "zhang-dark-prime"
   },
   "description": {
-    "default": "zhang-light配套夜间主题。"
+    "default": "zhang-light配套夜间主题；frostime 自定义版"
   },
   "readme": {
     "default": "README.md"

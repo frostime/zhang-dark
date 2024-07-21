@@ -1,0 +1,55 @@
+/* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
+.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block),
+.pcr-app .pcr-interaction .pcr-result {
+    /* border-bottom: 2px solid inherit; */
+    box-sizing: border-box !important;
+}
+
+/*.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):hover, .pcr-app .pcr-interaction .pcr-result:hover {
+    border-bottom: 1px solid var(--b3-theme-on-background) !important;
+    color: var(--b3-font-color-hover);
+    background-color: var(--b3-theme-hover-gray);
+    box-shadow: none;
+}*/
+
+.b3-text-field:not(textarea.b3-text-field.b3-text-field--text.fn__block):focus,
+.pcr-app .pcr-interaction .pcr-result:focus {
+    /* border-bottom: 1px solid var(--b3-theme-primary) !important; */
+    color: var(--b3-theme-primary);
+    background-color: var(--b3-theme-tm2);
+    box-shadow: none;
+}
+
+/* ————————————————————设置shift+鼠标左键弹出的属性窗口中输入框的背景颜色和底边框—————————————————— */
+
+.b3-text-field.fn__block[data-name="memo"] {
+    background-color: transparent;
+    display: inline-table;
+    box-shadow: unset;
+    border-radius: 0px
+}
+
+.b3-text-field.fn__block[data-name="memo"]:focus {
+    box-shadow: inset 0px 1px 0px 0px var(--b3-theme-primary), 0px -3px 0px 0px var(--b3-theme-primary-lightest)
+}
+
+.b3-label--noborder:has(.b3-text-field.fn__block[data-name="memo"]) {
+    background-color: transparent;
+    text-align: center;
+    margin-top: 10px;
+    border-bottom: none
+}
+
+.b3-text-field.fn__block[data-name="alias"],
+.b3-text-field.fn__block[data-name="name"],
+.b3-text-field.fn__block[data-name="bookmark"] {
+    background-color: transparent;
+    box-shadow: unset;
+    border-radius: 0px
+}
+
+.b3-text-field.fn__block[data-name="alias"]:focus,
+.b3-text-field.fn__block[data-name="name"]:focus,
+.b3-text-field.fn__block[data-name="bookmark"]:focus {
+    box-shadow: inset 0px -1px 0px 0px var(--b3-theme-primary), 0px 3px 0px 0px var(--b3-theme-primary-lightest)
+}

@@ -1,0 +1,90 @@
+/* -------------------------------------------------高亮----------------------------------------------- */
+mark {
+    border-radius: var(--b3-border-radius-noraml);
+    margin: 0px 0px;
+}
+
+/* 搜索高亮 */
+.protyle-wysiwyg [data-node-id] span[data-type="search-mark"] {
+    animation-name: change;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: var(--b3-border-radius-noraml);
+}
+
+@keyframes change {
+    0% {
+        color: white;
+        background-color: var(--b3-theme-primary);
+    }
+
+    100% {
+        color: white;
+        background-color: var(--b3-theme-hover);
+    }
+}
+
+
+/* -------------------------------------------------高亮 END----------------------------------------------- */
+/* ---------------------------------加粗------------------------------ */
+.b3-typography strong,
+.protyle-wysiwyg strong {
+    color: inherit;
+}
+
+/* --------------------------------下划线样式--------------------------- */
+/* .b3-typography u,
+.protyle-wysiwyg u {
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+    padding-bottom: 1px;
+} */
+
+
+/* 原 hyper link */
+
+/* 原嵌入块 */
+
+
+
+/* --------------------------------------------------警告 error----------------------------------------------- */
+.b3-snackbar--error {
+    background-color: var(--b3-theme-error);
+    color: var(--b3-theme-on-error);
+}
+
+.b3-snackbar__content {
+    line-height: 20px;
+    border-radius: var(--b3-border-radius-noraml);
+    padding: 8px 16px;
+    color: #fff;
+    font-size: inherit;
+    background-color: var(--b3-theme-primary);
+    box-sizing: border-box;
+    transition: transform 0.15s cubic-bezier(0, 0, 0.2, 1) 0ms;
+    transform: scale(0.8);
+    top: 16px;
+    position: absolute;
+    word-break: break-word;
+    max-width: 80vw;
+}
+
+.b3-snackbar__close {
+    position: absolute;
+    color: #fff;
+    font-size: 50%;
+    padding: 4px;
+    background: #ec8d8deb;
+    border-radius: var(--b3-border-radius-half-round);
+    cursor: pointer;
+    top: 2px;
+}
+
+.b3-snackbar__content svg:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* --------------------------------------------------警告 END----------------------------------------------- */

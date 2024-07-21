@@ -1,0 +1,22 @@
+.dock#dockBottom {
+    background-color: transparent;
+    margin-top: -42px;
+    border: none
+}
+
+.dock#dockBottom .dock__item {
+    background-color: var(--b3-theme-surface);
+    border: var(--b3-border-normal)
+}
+
+.dock#dockLeft {
+    border-right: var(--b3-border-normal)
+}
+
+.dock#dockRight {
+    border-left: var(--b3-border-normal)
+}
+
+#dockright {
+    border-left: var(--b3-border-wider);
+}
